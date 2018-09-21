@@ -1,0 +1,10 @@
+{
+  "name": "print-toConsole-andFile",
+  "description": "Adds a print button to the browser.",
+  "version": "1.0",
+  "browser_action": {
+      "default_title": "print-toConsole-andFile",
+      "default_icon": "print_16x16.png"
+  },
+  "manifest_version": 2
+}
