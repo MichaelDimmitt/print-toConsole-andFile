@@ -11,7 +11,19 @@
   ],
   "browser_action": {
       "default_title": "print-toConsole-andFile",
-      "default_icon": "print_16x16.png"
+      "default_icon": {
+        "16": "image/print_16x16.png",
+        "32": "image/print_32x32.png",
+        "48": "image/print_48x48.png",
+        "128":"image/print_128x128.png"
+      }
+  },
+  "icons": {
+    "16": "image/print_16x16.png",
+    "32": "image/print_32x32.png",
+    "48": "image/print_48x48.png",
+    "128":"image/print_128x128.png"
   },
   "manifest_version": 2
 }
+
