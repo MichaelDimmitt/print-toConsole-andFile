@@ -3,8 +3,13 @@
 // found in the LICENSE file.
 
 // Called when the user clicks on the browser action.
-chrome.browserAction.onClicked.addListener(function(tab) {
-  var action_url = "javascript:console.log(document.getElementsByTagName('body')[0].outerHTML);";
+chrome.browserAction.onClicked.addListener(
+  function(tab) {
+    var action_url = "javascript:console.log(document.outerHTML);";
+    chrome.tabs.update(tab.id, {url: action_url});
+  }
+);
 
-  chrome.tabs.update(tab.id, {url: action_url});
-});
+// notes:
+// document.getElementsByTagName('body')[0].outerHTML
+// , {url: [{urlMatches : '*://*/*'}]}
