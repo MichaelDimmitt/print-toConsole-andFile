@@ -7,7 +7,19 @@
 ```bash 
 git clone https://github.com/MichaelDimmitt/print-toConsole-andFile.git
 cd print-toConsole-andFile
-open chrome://extensions
+## open chrome extension tab on a mac
+osascript <<EOD
+set theURL to "chrome://extensions/"
+tell application "Google Chrome"
+ if windows = {} then
+  make new window
+  set URL of (active tab of window 1) to theURL
+ else
+  make new tab at the end of window 1 with properties {URL:theURL}
+ end if
+ activate
+end tell
+EOD
 ```
 ensure dev tools are enabled in the top right corner of this page
 <br>and click load unpacked and go to select the directory for this project
